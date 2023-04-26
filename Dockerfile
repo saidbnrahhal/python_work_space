@@ -10,5 +10,7 @@ RUN pip install --no-cache-dir --upgrade -r requirements.txt
 # copy the src to the folder
 COPY ./src ./src
 
-# start the server
-CMD ["uvicorn", "src.main:app", "--host", "0.0.0.0", "--port", "80", "--reload"]
+#TODO start the server
+#CMD ["uvicorn", "src.main:app", "--host", "0.0.0.0", "--port", "80", "--reload"]
+# start jupyter notebook
+CMD ["jupyter","notebook", "--port=8888","--no-browser","--ip=0.0.0.0","--allow-root"]

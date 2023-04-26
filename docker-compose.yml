@@ -2,7 +2,10 @@ services:
   app:
     build: .
     container_name: python-server
-    command: uvicorn src.main:app --host 0.0.0.0 --port 80 --reload
+    #TODO start server
+    #command: uvicorn src.main:app --host 0.0.0.0 --port 80 --reload
+    #start notebook
+    command: jupyter notebook --port=8888 --no-browser --ip=0.0.0.0 --allow-root
     ports:
       - 80:80
       - 5678:5678
